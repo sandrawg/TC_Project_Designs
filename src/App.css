@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Ensure the app spans the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Adjust to prevent content from being cut off */
+  align-items: center;
+  background-color: #f5f5f5;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  padding: 1rem; /* Add padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensure padding is included in the width/height */
+}
+
+.screen-container {
+  width: 100%; /* Ensure the container spans the full width of the viewport */
+  max-width: 500px; /* Limit the container width for readability */
+  min-height: 90%; /* Ensure enough space for content without cutting it */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Enable scrolling within the container */
+  padding: 1rem; /* Add padding to create space inside the container */
+  box-sizing: border-box;
+  transition: transform 0.5s ease-in-out; /* Smooth transitions between screens */
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust width to give buttons more space */
+}
+
+.nav-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for larger, more touch-friendly buttons */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Adds a slight zoom effect on hover */
+}
+
+.nav-button:active {
+  background-color: #003f7f;
+}
+
+.screen-title {
+  margin-bottom: 20px; /* Add more space between title and content */
+  font-size: 24px; /* Increase font size for better readability */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+  .App {
+    padding: 0.5rem; /* Reduce padding for smaller devices */
+  }
+
+  .screen-container {
+    width: 95%; /* Increase responsiveness by using more of the screen width */
+    min-height: 85%; /* Adjust height for better use of smaller screens */
+  }
+
+  .nav-button {
+    font-size: 14px; /* Adjust font size for smaller buttons */
+    padding: 8px 15px; /* Adjust padding for smaller devices */
+  }
+}
