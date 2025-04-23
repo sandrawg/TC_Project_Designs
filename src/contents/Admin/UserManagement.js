@@ -84,12 +84,12 @@ const UserManagement = () => {
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Users style={{ color: '#11468F', width: '2rem', height: '2rem', marginRight: '0.5rem' }} />
               <div>
-                <p style={{ fontWeight: 'bold', margin: 0 }}>John Doe</p>
-                <p style={{ margin: 0, color: '#666666', fontSize: '0.875rem' }}>john.doe@example.com</p>
+                <p style={{ fontWeight: 'bold', margin: 0 }}>Sandra Gitau</p>
+                <p style={{ margin: 0, color: '#666666', fontSize: '0.875rem' }}>sandra.gitau@example.com</p>
               </div>
             </div>
             <div>
-              <p style={{ fontWeight: 'bold', margin: 0, color: '#DA1212' }}>$5,000</p>
+              <p style={{ fontWeight: 'bold', margin: 0, color: '#DA1212' }}>KES 5,000</p>
               <p style={{ margin: 0, fontSize: '0.875rem', color: '#11468F' }}>4 Contributions</p>
             </div>
           </div>

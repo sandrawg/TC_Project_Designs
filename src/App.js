@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./App.css";
 
 // Import all the screens
-import AdminDashboard from "./contents/Admin/AdminDashboard";
 import LoginRegistrationAdmin from "./contents/Admin/LoginRegistration";
 import NotificationsAdmin from "./contents/User/Notifications";
 import SetTargetAdmin from "./contents/Admin/SetTarget";
@@ -12,6 +11,10 @@ import SplashscreenAdmin from "./contents/Admin/Splashscreen";
 import LandingPage from "./contents/Admin/LandingPage";
 import SettingsPage from "./contents/Admin/Settings";
 import AdminDashboardWithSidebar from "./contents/Admin/sidebar";
+import AdminMembersPage from "./contents/Admin/AdminMembersPage";
+import Analytics from "./contents/Admin/Analytics";
+import ReportsPage from "./contents/Admin/ReportsPage";
+import AdminAccess from "./contents/Admin/AdminAccess";
 
 import UserDashboard from "./contents/User/UserDashboard";
 import LoginRegisterUser from "./contents/User/LoginRegister";
@@ -21,6 +24,8 @@ import ProgressUser from "./contents/User/Progress";
 import SetTargetUser from "./contents/User/SetTarget";
 import ShareUser from "./contents/User/Share";
 import SplashscreenUser from "./contents/User/Splashscreen";
+import DonationHistory from "./contents/User/DonationHistory";
+import EventsPage from "./contents/User/EventsPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -30,10 +35,13 @@ function App() {
     <SplashscreenAdmin />,
     <LandingPage />,
     <LoginRegistrationAdmin />,
-    <AdminDashboard />,
     <AdminDashboardWithSidebar />,
+    <AdminMembersPage />,
     <SetTargetAdmin />,
+    <Analytics />,
+    <ReportsPage />,
     <UserManagementAdmin />,
+    <AdminAccess />,
     <NotificationsAdmin />,
     <SettingsPage />,
     
@@ -43,8 +51,10 @@ function App() {
     <UserDashboard />,
     <SetTargetUser />,
     <PaymentUser />,
+    <DonationHistory />,
     <ShareUser />,
     <ProgressUser />,
+    <EventsPage />,
     <NotificationsUser />,
     <SettingsPage />,
 

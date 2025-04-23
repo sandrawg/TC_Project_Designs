@@ -1,61 +1,32 @@
-
 import React from "react";
 import { Menu, Bell, ArrowUpRight, ArrowDownRight } from "lucide-react";
 
 const AdminDashboard = () => {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#EEEEEE",
-        padding: "1.5rem",
-      }}
-    >
+    <div className="min-h-screen bg-gray-200 p-6">
       {/* Header */}
-      <div
-        style={{
-          backgroundColor: "#DA1212",
-          padding: "1.5rem",
-          color: "#FFFFFF",
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Menu style={{ width: "1.5rem", height: "1.5rem", color: "#FFFFFF" }} />
-            <h1 style={{ fontSize: "1.5rem", fontWeight: "bold", marginLeft: "0.75rem" }}>Admin Dashboard</h1>
-          </div>
-          <Bell style={{ width: "1.5rem", height: "1.5rem", color: "#FFFFFF" }} />
+      <div className="bg-red-600 p-6 text-white flex justify-between items-center">
+        <div className="flex items-center">
+          <Menu className="w-6 h-6 text-white" />
+          <h1 className="text-xl font-bold ml-3">Admin Dashboard</h1>
         </div>
+        <Bell className="w-6 h-6 text-white" />
       </div>
 
       {/* Statistics Section */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "1.5rem",
-          marginTop: "-1.5rem",
-          marginBottom: "1.5rem",
-        }}
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6">
         {["Total Raised", "Active Church Members"].map((stat, index) => (
           <div
             key={index}
-            style={{
-              backgroundColor: "#11468F",
-              color: "#FFFFFF",
-              borderRadius: "1rem",
-              padding: "1rem",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            }}
+            className="bg-blue-900 text-white rounded-xl p-6 shadow-md"
           >
-            <p style={{ fontSize: "0.9rem", opacity: 0.8 }}>{stat}</p>
-            <h2 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              {stat === "Total Raised" ? "$750,000" : "328"}
+            <p className="text-sm opacity-80">{stat}</p>
+            <h2 className="text-2xl font-bold mt-1">
+              {stat === "Total Raised" ? "KES 100M" : "328"}
             </h2>
-            <div style={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}>
-              <ArrowUpRight style={{ width: "1rem", height: "1rem", color: "#76c893", marginRight: "0.5rem" }} />
-              <p style={{ fontSize: "0.8rem", color: "#76c893" }}>
+            <div className="flex items-center mt-2 text-green-400">
+              <ArrowUpRight className="w-4 h-4 mr-2" />
+              <p className="text-sm">
                 {stat === "Total Raised" ? "+12.5% this week" : "+24 this week"}
               </p>
             </div>
@@ -64,32 +35,22 @@ const AdminDashboard = () => {
       </div>
 
       {/* Progress Section */}
-      <div
-        style={{
-          backgroundColor: "#FFFFFF",
-          borderRadius: "1rem",
-          padding: "1.5rem",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          marginBottom: "1.5rem",
-        }}
-      >
-        <h2 style={{ fontWeight: "bold", marginBottom: "1rem" }}>Contribution Progress</h2>
-        <div style={{ marginBottom: "1rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-            <p style={{ fontSize: "0.9rem", color: "#666666" }}>Progress to Goal</p>
-            <p style={{ fontSize: "0.9rem", fontWeight: "bold" }}>75%</p>
+      <div className="bg-white rounded-xl p-6 shadow-md mb-6">
+        <h2 className="font-bold mb-4">Contribution Progress</h2>
+        <div className="mb-4">
+          <div className="flex justify-between mb-1 text-gray-600 text-sm">
+            <p>Progress to Goal</p>
+            <p className="font-bold">75%</p>
           </div>
-          <div style={{ height: "0.5rem", backgroundColor: "#EEEEEE", borderRadius: "0.25rem" }}>
-            <div style={{ width: "75%", height: "100%", backgroundColor: "#DA1212", borderRadius: "0.25rem" }}></div>
+          <div className="w-full h-2 bg-gray-300 rounded">
+            <div className="h-full bg-red-600 rounded" style={{ width: "75%" }}></div>
           </div>
         </div>
-        <div
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", textAlign: "center" }}
-        >
-          {["$1M", "90 Days", "$2,287"].map((item, index) => (
+        <div className="grid grid-cols-3 text-center text-gray-600">
+          {["KES 500M", "365 Days", "KES 200M"].map((item, index) => (
             <div key={index}>
-              <h3 style={{ fontSize: "1.25rem", fontWeight: "bold" }}>{item}</h3>
-              <p style={{ fontSize: "0.8rem", color: "#666666" }}>
+              <h3 className="text-lg font-bold">{item}</h3>
+              <p className="text-xs">
                 {index === 0 ? "Target" : index === 1 ? "Days Left" : "Avg Contribution"}
               </p>
             </div>
@@ -98,41 +59,28 @@ const AdminDashboard = () => {
       </div>
 
       {/* Activity Section */}
-      <div
-        style={{
-          backgroundColor: "#FFFFFF",
-          borderRadius: "1rem",
-          padding: "1.5rem",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        <h2 style={{ fontWeight: "bold", marginBottom: "1rem" }}>Recent Activity</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {["New Contributors", "Total Contribution", "Avg. Contribution"].map((activity, index) => (
-            <div key={index} style={{ display: "flex", justifyContent: "space-between" }}>
-              <p style={{ fontSize: "0.9rem", color: "#666666" }}>{activity}</p>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                {index === 2 ? (
-                  <ArrowDownRight
-                    style={{ width: "1rem", height: "1rem", color: "#DA1212", marginRight: "0.5rem" }}
-                  />
-                ) : (
-                  <ArrowUpRight
-                    style={{ width: "1rem", height: "1rem", color: "#76c893", marginRight: "0.5rem" }}
-                  />
-                )}
-                <p
-                  style={{
-                    fontSize: "0.9rem",
-                    fontWeight: "bold",
-                    color: index === 2 ? "#DA1212" : "#76c893",
-                  }}
-                >
-                  {index === 0 ? "+12" : index === 1 ? "+$5.2k" : "-$124"}
-                </p>
+      <div className="bg-white rounded-xl p-6 shadow-md">
+        <h2 className="font-bold mb-4">Recent Activity</h2>
+        <div className="space-y-4">
+          {["New Contributors", "Total Contribution", "Avg. Contribution"].map(
+            (activity, index) => (
+              <div key={index} className="flex justify-between text-gray-600 text-sm">
+                <p>{activity}</p>
+                <div className="flex items-center">
+                  {index === 2 ? (
+                    <ArrowDownRight className="w-4 h-4 text-red-600 mr-2" />
+                  ) : (
+                    <ArrowUpRight className="w-4 h-4 text-green-400 mr-2" />
+                  )}
+                  <p
+                    className={`font-bold ${index === 2 ? "text-red-600" : "text-green-400"}`}
+                  >
+                    {index === 0 ? "+12" : index === 1 ? "+KES 5.2k" : "-KES 124"}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </div>

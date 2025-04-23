@@ -33,8 +33,8 @@ const UserDashboard = () => {
       >
         <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>My Progress</h2>
         <div style={{ margin: '1rem 0', display: 'flex', justifyContent: 'space-between' }}>
-          <span>$2,500 Raised</span>
-          <span>Target: $5,000</span>
+          <span>KES 2,500 Raised</span>
+          <span>Target: KES 5,000</span>
         </div>
         <div style={{ backgroundColor: '#EEEEEE', height: '0.5rem', borderRadius: '0.5rem' }}>
           <div style={{ backgroundColor: '#DA1212', height: '100%', width: '50%' }}></div>
@@ -84,7 +84,7 @@ const UserDashboard = () => {
         }}
       >
         <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>Recent Activity</h2>
-        {[{ date: 'Jan 20', amount: '$500' }].map((activity, index) => (
+        {[{ date: 'Jan 20', amount: 'KES 500' }].map((activity, index) => (
           <div key={index} style={{ margin: '1rem 0', display: 'flex', justifyContent: 'space-between' }}>
             <span>{activity.date}</span>
             <span>{activity.amount}</span>

@@ -47,10 +47,10 @@ const ProgressPage = () => {
 
         <div style={{ marginBottom: "1.5rem" }}>
           <p style={{ fontSize: "1rem", color: "#666666", marginBottom: "0.5rem" }}>
-            Total Goal: <strong>${progressData.totalGoal.toLocaleString()}</strong>
+            Total Goal: <strong>KES {progressData.totalGoal.toLocaleString()}</strong>
           </p>
           <p style={{ fontSize: "1rem", color: "#666666", marginBottom: "0.5rem" }}>
-            Amount Raised: <strong>${progressData.amountRaised.toLocaleString()}</strong>
+            Amount Raised: <strong>KES {progressData.amountRaised.toLocaleString()}</strong>
           </p>
           <div style={{ marginBottom: "1rem" }}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -60,7 +60,7 @@ const ProgressPage = () => {
             <div style={{ height: "0.5rem", backgroundColor: "#EEEEEE", borderRadius: "0.25rem" }}>
               <div
                 style={{
-                  width: `${progressData.percentage}%`,
+                  width: `KES {progressData.percentage}%`,
                   height: "100%",
                   backgroundColor: "#DA1212",
                   borderRadius: "0.25rem",
@@ -79,9 +79,9 @@ const ProgressPage = () => {
           }}
         >
           {[
-            { label: "Goal", value: `$${progressData.totalGoal.toLocaleString()}` },
-            { label: "Raised", value: `$${progressData.amountRaised.toLocaleString()}` },
-            { label: "Remaining", value: `$${(progressData.totalGoal - progressData.amountRaised).toLocaleString()}` },
+            { label: "Goal", value: `KES KES {progressData.totalGoal.toLocaleString()}` },
+            { label: "Raised", value: `KES KES {progressData.amountRaised.toLocaleString()}` },
+            { label: "Remaining", value: `KES KES {(progressData.totalGoal - progressData.amountRaised).toLocaleString()}` },
           ].map((item, index) => (
             <div key={index}>
               <h3 style={{ fontSize: "1.25rem", fontWeight: "bold" }}>{item.value}</h3>

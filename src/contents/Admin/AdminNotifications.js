@@ -6,7 +6,7 @@ const NotificationsPage = () => {
     {
       id: 1,
       icon: Target,
-      title: "Target Milestone Reached!",
+      title: "Target Mile Reached!",
       message: "You've reached 75% of your monthly target.",
       time: "2 hours ago",
       type: "success"
@@ -15,7 +15,7 @@ const NotificationsPage = () => {
       id: 2,
       icon: TrendingUp,
       title: "Church Goal Update",
-      message: "We're now at $750,000 - 75% of our goal.",
+      message: "We're now at KES 750,000 - 75% of our goal.",
       time: "1 day ago",
       type: "info"
     },
@@ -23,7 +23,7 @@ const NotificationsPage = () => {
       id: 3,
       icon: UserCheck,
       title: "New Contribution",
-      message: "Your contribution of $500 was received.",
+      message: "Your contribution of KES 500 was received.",
       time: "2 days ago",
       type: "success"
     }

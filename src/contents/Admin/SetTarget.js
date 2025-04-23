@@ -35,7 +35,7 @@ const AdminSetTarget = () => {
         {/* Contribution Goal */}
         <div style={{ marginBottom: "1.5rem" }}>
           <label style={{ display: "block", fontSize: "1rem", marginBottom: "0.5rem" }}>
-            Contribution Goal ($)
+            Contribution Goal (KES )
           </label>
           <div style={{ position: "relative" }}>
             <Target
@@ -108,7 +108,7 @@ const AdminSetTarget = () => {
           <p style={{ fontSize: "1rem", marginBottom: "0.5rem" }}>
             Required Monthly Goal:{" "}
             <strong style={{ color: "#DA1212" }}>
-              ${(targetAmount / duration).toFixed(2)}
+              KES {(targetAmount / duration).toFixed(2)}
             </strong>
           </p>
         </div>
